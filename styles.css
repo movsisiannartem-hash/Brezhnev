@@ -1136,21 +1136,26 @@ input:focus-visible {
   }
 
   .hero-fullscreen {
+    width: 100%;
+    max-width: 100%;
     height: auto;
     min-height: 100vh;
     min-height: 100dvh;
     align-items: flex-start;
-    padding-top: 86px;
-    padding-bottom: 2rem;
+    padding-top: 74px;
+    padding-bottom: 1.5rem;
+    overflow-x: hidden;
   }
 
   .hero-layout-wrapper {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-left: clamp(1.25rem, 5vw, 2.5rem);
-    padding-right: clamp(1.25rem, 5vw, 2.5rem);
+    padding-left: clamp(1rem, 4vw, 1.5rem);
+    padding-right: clamp(1rem, 4vw, 1.5rem);
     height: auto;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-content-col {
@@ -1158,18 +1163,31 @@ input:focus-visible {
     max-width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0;
+  }
+
+  .hero-overline-wrapper {
+    margin-bottom: 0.55rem;
+  }
+
+  .hero-overline-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-headline {
+    margin-bottom: 1.1rem;
   }
 
   .headline-manrope {
-    font-size: clamp(2.4rem, 9.2vw, 3.4rem);
+    font-size: clamp(2.2rem, 8.8vw, 3.0rem);
     line-height: 1.04;
     white-space: normal;
   }
 
   .headline-cormorant {
-    font-size: clamp(3.2rem, 11.5vw, 4.4rem);
+    font-size: clamp(2.9rem, 11vw, 4.0rem);
     line-height: 0.95;
     margin-top: 2px;
     white-space: normal;
@@ -1182,17 +1200,61 @@ input:focus-visible {
   }
 
   .hero-actions-row {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 0.85rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
     width: 100%;
-    max-width: 340px;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .btn-primary-pill {
-    width: 100%;
-    justify-content: space-between;
-    padding: 8px 10px 8px 26px;
+    position: relative;
+    width: min(84%, 310px);
+    min-height: 48px;
+    margin: 0 auto;
+    padding: 12px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background-color: var(--color-btn-primary);
+    box-shadow: 0 6px 18px -2px rgba(50, 27, 18, 0.28);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-pill-text {
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--color-light);
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+  }
+
+  .btn-pill-badge {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .btn-primary-pill:hover .btn-pill-badge,
+  .btn-primary-pill:active .btn-pill-badge {
+    transform: translateY(-50%) translate(2px, -2px);
   }
 
   .btn-primary {
@@ -1202,31 +1264,53 @@ input:focus-visible {
   }
 
   .btn-text-link {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    padding: 8px 0;
+    padding: 5px 12px;
+    font-size: 0.95rem;
+    margin-top: 2px;
   }
 
   .hero-visual-col {
     width: 100%;
     height: auto;
-    max-height: 52vh;
-    max-height: 52dvh;
+    max-height: none;
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin-top: 1rem;
+    align-items: center;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .hero-photo-wrapper {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-picture {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .hero-team-photo {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    max-height: 48vh;
-    max-height: 48dvh;
+    max-height: none;
     object-fit: contain;
-    object-position: center bottom;
+    object-position: center top;
+    display: block;
   }
 
   /* На мобильных скрываем бегущую строку для чистоты экрана */
