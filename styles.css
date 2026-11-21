@@ -81,6 +81,9 @@ input:focus-visible {
   width: 100%;
   z-index: 60;
   padding: clamp(1rem, 2.2vh, 1.6rem) 0;
+  background-color: rgba(239, 227, 215, 0.72);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
   transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
@@ -1144,7 +1147,7 @@ input:focus-visible {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: clamp(88px, 12vh, 102px);
+    padding-top: clamp(96px, 13vh, 110px);
     padding-bottom: 2rem;
     overflow-x: hidden;
   }
@@ -1223,22 +1226,22 @@ input:focus-visible {
 
   .btn-primary-pill {
     position: relative;
-    width: min(78%, 280px);
-    min-height: 45px;
+    width: min(82%, 298px);
+    min-height: 48px;
     margin: 0 auto;
-    padding: 10px 42px;
+    padding: 12px 46px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-full);
     background-color: var(--color-btn-primary);
-    box-shadow: 0 6px 16px -2px rgba(50, 27, 18, 0.26);
+    box-shadow: 0 6px 18px -2px rgba(50, 27, 18, 0.28);
     text-decoration: none;
     cursor: pointer;
   }
 
   .btn-pill-text {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     color: var(--color-light);
@@ -1249,11 +1252,11 @@ input:focus-visible {
 
   .btn-pill-badge {
     position: absolute;
-    right: 5px;
+    right: 6px;
     top: 50%;
     transform: translateY(-50%);
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.16);
     display: flex;

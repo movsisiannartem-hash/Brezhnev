@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.scrollY > 25) {
       siteHeader.classList.add('is-scrolled');
       siteHeader.style.padding = '0.75rem 0';
-      siteHeader.style.backgroundColor = 'rgba(239, 227, 215, 0.96)';
+      siteHeader.style.backgroundColor = 'rgba(239, 227, 215, 0.88)';
       siteHeader.style.boxShadow = '0 4px 20px rgba(56, 34, 25, 0.06)';
     } else {
       siteHeader.classList.remove('is-scrolled');
