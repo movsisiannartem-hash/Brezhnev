@@ -58,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const titles = {
         services: 'Услуги',
-        works: 'Работы',
+        works: 'Портфолио',
         reviews: 'Отзывы',
         contacts: 'Контакты'
       };
       const title = titles[navTarget] || 'Раздел';
-      showToast(`Блок «${title}» будет добавлен на следующем этапе. Сейчас доступна запись к мастерам`);
+      showToast(`${title} — скоро появится`);
     });
   });
 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (viewWorksLink) {
     viewWorksLink.addEventListener('click', (e) => {
       e.preventDefault();
-      showToast('Галерея работ студии появится в следующем блоке. Запишитесь к топ-мастерам онлайн');
+      showToast('Портфолио скоро появится');
     });
   }
 
@@ -85,7 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       e.preventDefault();
       closeMobileDrawer();
-      showToast('Раздел появится на следующем этапе. Оформите запись к мастерам онлайн');
+      const titles = {
+        '#services': 'Услуги',
+        '#works': 'Портфолио',
+        '#reviews': 'Отзывы',
+        '#contacts': 'Контакты'
+      };
+      const title = titles[href] || 'Раздел';
+      showToast(`${title} — скоро появится`);
     });
   });
 
@@ -262,16 +269,28 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.innerHTML = `
       <span class="toast-dot" aria-hidden="true"></span>
       <span class="toast-text">${message}</span>
-      <button type="button" class="toast-action" data-action="open-booking">Записаться</button>
+      <button type="button" class="toast-action" data-action="open-booking">
+        <span>Запись</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </button>
     `;
 
     const toastActionBtn = toast.querySelector('.toast-action');
     if (toastActionBtn) {
-      toastActionBtn.addEventListener('click', () => {
+      toastActionBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         toast.classList.remove('is-visible');
         openBookingModal();
       });
     }
+
+    // Клик по самому тосту закрывает его
+    toast.onclick = () => {
+      toast.classList.remove('is-visible');
+    };
 
     clearTimeout(toastTimeout);
     requestAnimationFrame(() => {
@@ -280,6 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toastTimeout = setTimeout(() => {
       toast.classList.remove('is-visible');
-    }, 4500);
+    }, 3400);
   }
 });
