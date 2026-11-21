@@ -1,0 +1,4 @@
+# Local backups and scratch
+.backup_clean_state/
+.DS_Store
+*.tmp

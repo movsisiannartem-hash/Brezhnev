@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>БРЕЖНЕВ — салон бровей и ресниц</title>
+  <meta name="description" content="Салон бровей и ресниц «БРЕЖНЕВ». Брови, которые — про тебя. Светлый авторский бьюти-бренд в Новосибирске.">
+
+  <!-- Google Fonts: Manrope & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Шапка: оригинальный логотип слева, парящая капсульная навигация по центру, шоколадная кнопка справа -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container container">
+      <!-- Слева: оригинальный логотип без лишних капсул/шейпов -->
+      <a href="#" class="brand-logo" aria-label="БРЕЖНЕВ — салон бровей и ресниц">
+        <img src="assets/images/logo.png" alt="Логотип БРЕЖНЕВ" class="logo-image" width="40" height="40">
+        <div class="brand-naming">
+          <span class="brand-title">БРЕЖНЕВ</span>
+          <span class="brand-caption">салон бровей и ресниц</span>
+        </div>
+      </a>
+
+      <!-- По центру: плавающая капсульная навигация (по референсу 2-го фото) -->
+      <nav class="pill-nav" aria-label="Основная навигация">
+        <div class="pill-nav-track">
+          <a href="#hero" class="pill-nav-link is-active" data-nav="home">Главная</a>
+          <a href="#services" class="pill-nav-link" data-nav="services">Услуги</a>
+          <a href="#works" class="pill-nav-link" data-nav="works">Работы</a>
+          <a href="#reviews" class="pill-nav-link" data-nav="reviews">Отзывы</a>
+          <a href="#contacts" class="pill-nav-link" data-nav="contacts">Контакты</a>
+        </div>
+      </nav>
+
+      <!-- Справа: шоколадная кнопка записи с мягким скруглением -->
+      <div class="header-actions">
+        <a href="https://b11798.yclients.com/company/30795/select-time?o=m-1" target="_blank" rel="noopener noreferrer" class="btn-header-cta" id="headerCtaBtn">
+          <span>ЗАПИСАТЬСЯ</span>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Мобильное меню (Drawer) -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-naming">
+          <span class="brand-title">БРЕЖНЕВ</span>
+          <span class="brand-caption">салон бровей и ресниц</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Закрыть меню">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer-nav-list">
+        <li><a href="#hero" class="drawer-nav-link is-active">Главная</a></li>
+        <li><a href="#services" class="drawer-nav-link">Услуги</a></li>
+        <li><a href="#works" class="drawer-nav-link">Работы</a></li>
+        <li><a href="#reviews" class="drawer-nav-link">Отзывы</a></li>
+        <li><a href="#contacts" class="drawer-nav-link">Контакты</a></li>
+        <li>
+          <a href="https://yandex.ru/maps/org/brezhnev/1589538829/?ll=82.916812%2C55.029554&z=15" target="_blank" rel="noopener noreferrer" class="drawer-nav-link drawer-nav-link-map">
+            Как нас найти на карте
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="drawer-footer">
+        <a href="https://b11798.yclients.com/company/30795/select-time?o=m-1" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">
+          <span>ЗАПИСАТЬСЯ</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Полноэкранный первый экран (Full-Screen Hero: 100vw × 100vh) — Композиция по референсу с премиум-доработками -->
+  <main>
+    <section class="hero-fullscreen" id="hero">
+      
+      <!-- Текстурный слой дизайнерской бумаги (Warm Paper Grain) для тактильного ощущения премиума -->
+      <div class="hero-grain-overlay" aria-hidden="true"></div>
+
+      <div class="hero-layout-wrapper">
+        
+        <!-- Левая часть: текстовый блок, заголовок и кнопки -->
+        <div class="hero-content-col">
+          <div class="hero-text-block">
+            
+            <!-- Надпись над заголовком: «САЛОН БРОВЕЙ И РЕСНИЦ» -->
+            <div class="hero-overline-wrapper">
+              <span class="hero-overline-text">САЛОН БРОВЕЙ И РЕСНИЦ</span>
+            </div>
+
+            <!-- Заголовок в 3 строки по референсу: «Брови, / которые — / про тебя.» -->
+            <h1 class="hero-headline">
+              <span class="headline-manrope headline-line-1">Брови,</span>
+              <span class="headline-manrope headline-line-2">которые&nbsp;—</span>
+              <span class="headline-cormorant headline-line-3"><em>про тебя.</em></span>
+            </h1>
+
+            <!-- Кнопки действий: тёмная капсула с круглым бейджем со стрелкой ↗ и минималистичная ссылка -->
+            <div class="hero-actions-row">
+              <!-- Основная кнопка-капсула: тёмный шоколад с круглым бейджем со стрелкой ↗ и прямой ссылкой в YCLIENTS -->
+              <a href="https://b11798.yclients.com/company/30795/select-time?o=m-1" target="_blank" rel="noopener noreferrer" class="btn-primary-pill" id="heroCtaBtn">
+                <span class="btn-pill-text">ЗАПИСАТЬСЯ</span>
+                <span class="btn-pill-badge" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- Вторичная кнопка «Смотреть работы»: минималистичная ссылка со стрелкой -->
+              <a href="#works" class="btn-text-link" id="viewWorksLink">
+                <span>Смотреть работы</span>
+                <span class="link-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Правая часть: фотография команды -->
+        <div class="hero-visual-col" aria-hidden="false">
+          <div class="hero-photo-wrapper">
+            <picture class="hero-picture">
+              <source srcset="assets/images/team_clean@2x.jpg 2x, assets/images/team_clean.jpg 1x" type="image/jpeg">
+              <img 
+                src="assets/images/team_clean.jpg" 
+                alt="Команда мастеров студии «Бровная культура»" 
+                class="hero-team-photo"
+                width="1024"
+                height="773"
+                fetchpriority="high"
+                loading="eager"
+              >
+            </picture>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Тонкая, едва заметная editorial-строка направлений (Ticker Line) в самом низу экрана -->
+      <div class="hero-ticker-track" aria-hidden="true">
+        <div class="ticker-inner">
+          <span class="ticker-item">АРХИТЕКТУРА БРОВЕЙ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ЛАМИНИРОВАНИЕ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ДОЛГОВРЕМЕННАЯ УКЛАДКА</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ОКРАШИВАНИЕ ХНОЙ & КРАСКОЙ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ПЕРМАНЕНТНЫЙ МАКИЯЖ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ОСВЕТЛЕНИЕ & ТОНИРОВАНИЕ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">УХОД «СЧАСТЬЕ ДЛЯ БРОВЕЙ»</span><span class="ticker-star">✦</span>
+        </div>
+        <div class="ticker-inner" aria-hidden="true">
+          <span class="ticker-item">АРХИТЕКТУРА БРОВЕЙ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ЛАМИНИРОВАНИЕ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ДОЛГОВРЕМЕННАЯ УКЛАДКА</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ОКРАШИВАНИЕ ХНОЙ & КРАСКОЙ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ПЕРМАНЕНТНЫЙ МАКИЯЖ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">ОСВЕТЛЕНИЕ & ТОНИРОВАНИЕ</span><span class="ticker-star">✦</span>
+          <span class="ticker-item">УХОД «СЧАСТЬЕ ДЛЯ БРОВЕЙ»</span><span class="ticker-star">✦</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Интерактивное модальное окно быстрой онлайн-записи -->
+  <div class="modal-overlay" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Закрыть модальное окно">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body" id="modalBodyForm">
+        <div class="modal-header">
+          <span class="modal-label">ОНЛАЙН-ЗАПИСЬ</span>
+          <h2 class="modal-title" id="modalTitle">Записаться в студию</h2>
+          <p class="modal-description">Выберите удобный способ: мгновенная запись через YCLIENTS или оставьте заявку для звонка администратора.</p>
+        </div>
+
+        <a href="https://b11798.yclients.com/company/30795/select-time?o=m-1" target="_blank" rel="noopener noreferrer" class="btn-yclients-modal">
+          <span>Открыть онлайн-запись в YCLIENTS</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <div class="modal-divider-row">
+          <span>или заполните форму ниже</span>
+        </div>
+
+        <form class="booking-form" id="bookingForm" novalidate>
+          <div class="form-group">
+            <label for="userName" class="form-label">Ваше имя</label>
+            <input type="text" id="userName" name="name" class="form-input" placeholder="Как к вам обращаться?" required autocomplete="name">
+            <span class="form-error-msg" id="nameError">Пожалуйста, укажите ваше имя</span>
+          </div>
+
+          <div class="form-group">
+            <label for="userPhone" class="form-label">Номер телефона</label>
+            <input type="tel" id="userPhone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            <span class="form-error-msg" id="phoneError">Введите корректный номер телефона</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Желаемая услуга</label>
+            <div class="service-selector">
+              <label class="service-chip">
+                <input type="radio" name="service" value="Архитектура и окрашивание" checked>
+                <span class="chip-label">Архитектура &amp; Окрашивание</span>
+              </label>
+              <label class="service-chip">
+                <input type="radio" name="service" value="Ламинирование бровей">
+                <span class="chip-label">Ламинирование</span>
+              </label>
+              <label class="service-chip">
+                <input type="radio" name="service" value="Осветление и уход">
+                <span class="chip-label">Осветление &amp; Уход</span>
+              </label>
+              <label class="service-chip">
+                <input type="radio" name="service" value="Консультация мастера">
+                <span class="chip-label">Консультация</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-block modal-submit-btn">
+            <span>ОТПРАВИТЬ ЗАЯВКУ</span>
+          </button>
+
+          <p class="form-disclaimer">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+          </p>
+        </form>
+      </div>
+
+      <div class="modal-body modal-success-state" id="modalSuccessState" style="display: none;">
+        <div class="success-icon-badge" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="success-title">Заявка принята</h3>
+        <p class="success-text">Администратор студии свяжется с вами в течение 10–15 минут для подтверждения времени записи.</p>
+        <button type="button" class="btn-secondary btn-block" id="successCloseBtn">
+          <span>ОТЛИЧНО</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
