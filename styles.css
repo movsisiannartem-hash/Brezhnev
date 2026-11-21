@@ -1313,12 +1313,13 @@ input:focus-visible {
     height: auto;
     max-height: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     margin-top: 0.85rem;
     margin-bottom: 0;
     padding: 0;
     flex: 0 0 auto;
+    overflow: hidden;
   }
 
   .hero-photo-wrapper {
@@ -1328,7 +1329,7 @@ input:focus-visible {
     max-height: none;
     margin-bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
   }
 
@@ -1345,12 +1346,16 @@ input:focus-visible {
   }
 
   .hero-picture {
-    width: 100%;
+    width: 110%;
+    max-width: 110%;
     height: auto;
     max-height: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
+    margin-left: auto;
+    margin-right: 0;
+    flex-shrink: 0;
   }
 
   .hero-team-photo {
@@ -1359,7 +1364,7 @@ input:focus-visible {
     height: auto;
     max-height: none;
     object-fit: contain;
-    object-position: center top;
+    object-position: right top;
     display: block;
     -webkit-mask-image: linear-gradient(to bottom, black 65%, rgba(0, 0, 0, 0.4) 82%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 65%, rgba(0, 0, 0, 0.4) 82%, transparent 100%);
